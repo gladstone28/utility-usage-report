@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utility Entry Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Utility and Expense Reporting Form</h1>
+        <p>Welcome to the Utility and Expense Reporting Form. As the Factory Manager, you are required to accurately report the usage of various utilities such as electricity, water, internet, and consumables. Please ensure to fill in the usage data, select
+            the appropriate period, and upload a photo of the utility meter or bill. This form can be submitted on a daily basis or as necessary, according to the usage and billing cycles. Your attention to detail and prompt reporting are crucial for
+            efficient management and accounting. Thank you for your cooperation.</p>
+
+        <form id="utilityForm" action="https://formspree.io/f/{your-form-id}" method="POST" enctype="multipart/form-data">
+            <label for="utilityType">Utility Type:</label>
+            <select id="utilityType" name="utilityType" required>
+                <option value="electricity">Electricity</option>
+                <option value="water">Water</option>
+                <option value="internet">Internet</option>
+                <option value="consumables">Consumables</option>
+            </select>
+
+            <label for="usage">Usage:</label>
+            <input type="text" id="usage" name="usage" required>
+
+            <label for="period">Period:</label>
+            <input type="date" id="period" name="period" required>
+
+            <label for="billPhoto">Utility Bill/Meter Photo:</label>
+            <input type="file" id="billPhoto" name="billPhoto" accept="image/*" capture="environment" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
