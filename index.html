@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utility Entry Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form id="utilityForm" action="https://formspree.io/f/xkndqkop" method="POST" enctype="multipart/form-data">
+        <label for="utilityType">Utility Type:</label>
+        <select id="utilityType" name="utilityType" required>
+            <option value="electricity">Electricity</option>
+            <option value="water">Water</option>
+            <option value="internet">Internet</option>
+            <option value="consumables">Consumables</option>
+        </select>
+
+        <label for="usage">Usage:</label>
+        <input type="text" id="usage" name="usage" required>
+
+        <label for="period">Period:</label>
+        <input type="date" id="period" name="period" required>
+
+        <label for="billPhoto">Utility Bill/Meter Photo:</label>
+        <input type="file" id="billPhoto" name="billPhoto" accept="image/*" capture="environment" required>
+
+        <button type="submit">Submit</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
