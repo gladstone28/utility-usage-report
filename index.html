@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Utility Entry Form</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -15,6 +14,13 @@
         <p>This form can be submitted on a daily basis or as necessary, according to the usage and billing cycles. Your attention to detail and prompt reporting are crucial for efficient management and accounting. Thank you for your cooperation.</p>
 
         <form id="utilityForm" action="https://formspree.io/f/xkndqkop" method="POST" enctype="multipart/form-data">
+            <!-- Fields for the person completing the form -->
+            <label for="completerName">Your Name:</label>
+            <input type="text" id="completerName" name="completerName" required>
+
+            <label for="completerEmail">Your Email:</label>
+            <input type="email" id="completerEmail" name="completerEmail" required>
+
             <label for="utilityType">Utility Type:</label>
             <select id="utilityType" name="utilityType" required>
                 <option value="electricity">Electricity</option>
